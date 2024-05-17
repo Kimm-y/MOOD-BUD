@@ -1,10 +1,37 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
 import './index.css'
+import Login from './components/Authentication/Login.jsx'
+import Form from './components/MoodEntries/Form.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Landing from './pages/Landing/Landing.jsx'
+import Home from './pages/Home/Home.jsx'
+
+const urls = [
+  {
+    path: '/landing',
+    element: <Landing />
+  },
+  {
+    path: '/home',
+    element: <Home />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/form',
+    element: <Form />
+  },
+
+]
+
+const paths = createBrowserRouter(urls)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+   <RouterProvider router={paths} />
   </React.StrictMode>,
 )

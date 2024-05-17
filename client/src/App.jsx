@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import React from 'react';
+// // import Header from './components/Common/Header';
+// import MoodEntriesList from './components/MoodEntries/MoodEntriesList';
+// // import Footer from './components/Common/Footer';
+// import './App.css'
+
+
+// const App = () => {
+//     return (
+//         <div>
+//             {/* <Header /> */}
+//             <MoodEntriesList />
+//             {/* <Footer /> */}
+//         </div>
+//     );
+// };
+
+// export default App;
+
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import { Switch } from 'react-router-dom';
+import Login from './components/Authentication/Login';
 import './App.css'
+// import Form from './components/MoodEntries/Form'
+// import JournalEntryForm from './components/JournalEntries/JournalForm';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const MoodTrackingPage = () => {
+    const handleSubmit = (data) => {
+        console.log(data);
+    };
+  
+    MoodTrackingPage()
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+       <div className='box'>
+          <h1 className='heading'>Login to continue</h1>
+          <button className='sign-in-button'><Link to="/login">Login</Link></button>
+          </div>
 
+            <h1>Mood Tracking</h1>
+            <Form onSubmit={handleSubmit} /><Form/>
+
+            {/* <h1> Journal Entry</h1>
+            <JournalEntryForm/> */}
+            
+            
+            <Router>
+           
+            <Route path="/login" component={Login} />
+            {/*  authentication-related components- registration and stuff */}
+       
+            </Router> 
+      
+    </div>
+  )
+};
+}
 export default App
