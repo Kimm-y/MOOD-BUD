@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import { createMoodEntry } from './MoodService';
 import JournalEntryForm from '../JournalEntries/JournalForm';
+import './Entries.css'
 
 const MoodEntryForm = ({ onSubmit }) => {
     const [mood, setMood] = useState('');
@@ -9,33 +11,34 @@ const MoodEntryForm = ({ onSubmit }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await createMoodEntry({ mood, journalEntry });
-           
+            await createMoodEntry({ mood });
+            // Handle successful submission
         } catch (error) {
-          
             console.error('Failed to submit mood entry:', error);
         }
     };
-    
 
     return (
-        <>  
-        <JournalEntryForm/>
-        <form onSubmit={handleSubmit}>
-          <select value={mood} onChange={(e) => setMood(e.target.value)}>
-                <option value="">Select Mood</option>
-                <option value="happy">Happy</option>
-                <option value="sad">Sad</option>
-                <option value="anxious">Anxious</option>
-                <option value="angry">angry</option>
-                
-            </select>
-            {/* <textarea value={journalEntry} onChange={(e) => setJournalEntry(e.target.value)} placeholder="Today journal entry..." /> */}
-           
-            <button type="submit">Submit</button>
-        </form>
-        </> 
-       )
+        <>
+        <div className='foundation'>
+            <form onSubmit={handleSubmit} className='mood'>
+                <select value={mood} onChange={(e) => setMood(e.target.value)}>
+                    <option value="">Select your mood</option>
+                    <option value="Amazing">Amazing 😃</option>
+                    <option value="Good">Good 🙂</option>
+                    <option value="Meh">Meh 😐</option>
+                    <option value="Sad">Sad 😔</option>
+                    <option value="Angry">Angry 😠</option>
+                </select>
+                {/* <textarea value={journalEntry} onChange={(e) => setJournalEntry(e.target.value)} placeholder="Today's journal entry..." /> */}
+                <button  type="submit">Submit</button>
+            </form>
+            <JournalEntryForm />
+            <Link to= '/home'><button> BACK HOME</button></Link>
+            
+            </div>
+        </>
+    );
 };
 
 export default MoodEntryForm;

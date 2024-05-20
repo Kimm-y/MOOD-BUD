@@ -6,7 +6,8 @@
 
 
 .box{
-    margin-top: 20px;
+    height: 400px;
+    width: 900px;
     display: flex;
     flex-direction: column;
    align-items: center;
@@ -20,8 +21,7 @@
    border-radius: 20px;
    background-color: white;
    color:black;
-   width: 50%;
-   height: 200px;
+
 
 }
 
@@ -37,7 +37,7 @@
     height: 40px;
 
     border-radius: 5px;
-    background-color: rgb(103, 245, 195);
+    background-color: rgba(103, 245, 195, 0.893);
     border: none;
 
     cursor: pointer;

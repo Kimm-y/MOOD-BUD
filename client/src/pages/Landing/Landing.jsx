@@ -7,7 +7,7 @@ function Landing() {
     <div>
        <div className='box'>
           <h1 className='heading'>WELCOME TO MOOD BUD</h1>
-          <button className='form-button'><Link to="/home">Proceed to Homepage</Link></button>
+          <button className='form-button'><Link to="/login">Proceed to Homepage</Link></button>
           </div>
     </div>
   )

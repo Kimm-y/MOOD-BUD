@@ -1,6 +1,17 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/mood-entries/';
+const API_URL = 'http://127.0.0.1:8000//api';
+
+
+
+// import axios from 'axios';
+
+// const api = axios.create({
+//     baseURL: 'http://localhost:8000/api/', 
+// });
+
+export default API_URL;
+
 
 export const fetchMoodEntries = async () => {
     const response = await axios.get(API_URL);
@@ -22,4 +33,8 @@ export const deleteMoodEntry = async (id) => {
     return response.data;
 };
 
+export const fetchArticles = async () => {
+    const response = await axios.get(`${API_URL}articles/`);
+    return response.data;
+};
 

@@ -41,7 +41,7 @@ const Login = () => {
                
               />
                <div className="sign-in"> 
-               <Link to='/'>
+               <Link to='/home'>
               <button type="submit" className="login">LOGIN</button>
               </Link>
               </div>
