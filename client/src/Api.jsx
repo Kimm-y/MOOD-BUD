@@ -34,7 +34,24 @@ export const deleteMoodEntry = async (id) => {
 };
 
 export const fetchArticles = async () => {
-    const response = await axios.get(`${API_URL}articles/`);
-    return response.data;
+    try {
+        const response = await api.get('articles/');
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching articles:', error);
+        return [];
+    }
 };
+
+export const fetchScrapedArticles = async () => {
+    try {
+        const response = await api.get('scrape-articles/');
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching scraped articles:', error);
+        return [];
+    }
+};
+
+
 

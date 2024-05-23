@@ -7,6 +7,7 @@ import Form from './components/MoodEntries/Form.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Landing from './pages/Landing/Landing.jsx'
 import Home from './pages/Home/Home.jsx'
+import Articles from './pages/Articles/Articles.jsx'
 
 const urls = [
   {
@@ -24,6 +25,16 @@ const urls = [
   {
     path: '/form',
     element: <Form />
+  },
+  // {
+  //   path: '/myentries',
+  //   element: <Myentries />
+  // },
+  
+  
+  {
+    path: '/articles',
+    element: <Articles/>
   },
 
 ]

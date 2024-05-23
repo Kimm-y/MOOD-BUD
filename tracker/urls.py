@@ -1,13 +1,13 @@
 from django.urls import path
 from . import views
 from .views import JournalEntryListCreate
-from .views import ArticleListCreateView
+from .views import scrape_psychology_today_articles
 
 urlpatterns = [
     path('api/mood-entries/', views.MoodEntryListView.as_view(), name='mood-entry-list'),
     path('api/mood-entries/<int:pk>/', views.MoodEntryDetailView.as_view(), name='mood-entry-detail'),
     path('journal-entries/', JournalEntryListCreate.as_view(), name='journal-entries'),
-    path('api/articles/', ArticleListCreateView.as_view(), name='article-list-create'),
+    path('scrape-articles/', scrape_psychology_today_articles, name='scrape-articles'),
 
 
 ]

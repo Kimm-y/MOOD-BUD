@@ -1,12 +1,14 @@
 import React from 'react'
-import ArticleList from '../../Article'
+import ArticleList from '../../ArticleList'
 
 function Articles() {
   return (
     <div>
-      <ArticleList />
+     <ArticleList />
+      
     </div>
   )
 }
 
 export default Articles
+
