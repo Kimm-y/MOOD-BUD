@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { login } from '../../components/Authentication/Auth';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -43,7 +44,8 @@ const Login = () => {
             />
             <div className="sign-in mt-5"> 
                 <button type="submit" className="login btn btn-primary column-gap-3">LOGIN</button>
-                <button type="submit" className="login btn btn-primary">REGISTER</button>
+                <Link to = '/register'>
+                <button type="submit" className="login btn btn-primary">REGISTER</button></Link>
             </div>
         </form>
     );

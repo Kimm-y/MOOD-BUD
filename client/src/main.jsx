@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Landing from './pages/Landing/Landing.jsx'
 import Home from './pages/Home/Home.jsx'
 import Articles from './pages/Articles/Articles.jsx'
+import Register from './components/Authentication/Register.jsx'
 
 const urls = [
   {
@@ -25,6 +26,10 @@ const urls = [
   {
     path: '/form',
     element: <Form />
+  },
+  {
+    path: '/register',
+    element: <Register/>
   },
   // {
   //   path: '/myentries',

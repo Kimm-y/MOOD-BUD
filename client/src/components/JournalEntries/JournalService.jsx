@@ -5,7 +5,7 @@ const API_URL = 'http://localhost:8000/api/';
 export const createJournalEntry = async (entry) => {
     try {
         console.log('Submitting journal entry:', entry);
-        const response = await axios.POST(`${API_URL}journal-entries/`, { entry });
+        const response = await axios.post(`${API_URL}journal-entries/`, { entry });
         console.log('API response:', response.data);
         return response.data;
     } catch (error) {
