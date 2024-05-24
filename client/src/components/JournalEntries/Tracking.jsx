@@ -1,4 +1,4 @@
-// MoodTrackingPage.jsx or wherever you render JournalEntryForm
+
 import React from 'react';
 import JournalEntryForm from './JournalEntryForm';
 import { createJournalEntry } from '../services/journalService';

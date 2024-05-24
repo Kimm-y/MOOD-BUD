@@ -11,6 +11,7 @@ import Articles from './pages/Articles/Articles.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App.jsx'
 
+import Register from './components/Authentication/Register.jsx'
 
 const urls = [
   {
@@ -32,6 +33,10 @@ const urls = [
   {
     path: '/form',
     element: <Form />
+  },
+  {
+    path: '/register',
+    element: <Register/>
   },
   // {
   //   path: '/myentries',

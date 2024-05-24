@@ -126,7 +126,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createMoodEntry } from './MoodService';
-import JournalEntryForm from '../JournalEntries/JournalForm';
+import JournalEntryForm from '../JournalEntries/JournalForm';  
 
 const MoodEntryForm = () => {
     const [mood, setMood] = useState('');
@@ -135,6 +135,8 @@ const MoodEntryForm = () => {
         e.preventDefault();
         try {
             await createMoodEntry({ mood });
+            console.log('Mood entry submitted successfully');
+            setMood('');  
         } catch (error) {
             console.error('Failed to submit mood entry:', error);
         }
@@ -187,3 +189,4 @@ const MoodEntryForm = () => {
 };
 
 export default MoodEntryForm;
+
