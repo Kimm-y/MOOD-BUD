@@ -9,6 +9,8 @@ import Landing from './pages/Landing/Landing.jsx'
 import Home from './pages/Home/Home.jsx'
 import Articles from './pages/Articles/Articles.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.min.css";
 import App from './App.jsx'
 
 import Register from './components/Authentication/Register.jsx'

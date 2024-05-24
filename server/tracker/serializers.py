@@ -6,7 +6,7 @@ from .models import Article
 class MoodEntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = MoodEntry
-        fields = '__all__'
+        fields = ['mood']
 
 class JournalEntrySerializer(serializers.ModelSerializer):
     class Meta:

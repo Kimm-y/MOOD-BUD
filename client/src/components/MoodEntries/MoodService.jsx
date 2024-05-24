@@ -4,7 +4,7 @@ const API_URL = 'http://localhost:8000/api/';
 
 export const createMoodEntry = async (moodEntry) => {
     try {
-        const response = await axios.post(`${API_URL}mood/`, moodEntry);
+        const response = await axios.post(`${API_URL}mood-entries/`, moodEntry);
         return response.data;
     } catch (error) {
         console.error('Failed to create mood entry:', error);

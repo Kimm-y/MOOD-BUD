@@ -6,7 +6,7 @@ from .models import JournalEntry
 from .models import Article
 
 class MoodEntryAdmin(admin.ModelAdmin):
-    list_display = ('user', 'mood' ,'journal_entry' ,'created_at')
+    list_display = ('mood','created_at')
 
 # Register your models here.
 
