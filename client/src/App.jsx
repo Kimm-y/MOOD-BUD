@@ -1,21 +1,4 @@
-// import React from 'react';
-// // import Header from './components/Common/Header';
-// import MoodEntriesList from './components/MoodEntries/MoodEntriesList';
-// // import Footer from './components/Common/Footer';
-// import './App.css'
 
-
-// const App = () => {
-//     return (
-//         <div>
-//             {/* <Header /> */}
-//             <MoodEntriesList />
-//             {/* <Footer /> */}
-//         </div>
-//     );
-// };
-
-// export default App;
 
 import React from 'react'
 import { Link } from 'react-router-dom'

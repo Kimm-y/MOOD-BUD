@@ -8,8 +8,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Landing from './pages/Landing/Landing.jsx'
 import Home from './pages/Home/Home.jsx'
 import Articles from './pages/Articles/Articles.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './App.jsx'
+
 
 const urls = [
+  {
+    path: '/',
+    element: <App/>
+  },
   {
     path: '/landing',
     element: <Landing />
